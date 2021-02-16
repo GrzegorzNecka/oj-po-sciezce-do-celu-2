@@ -1,0 +1,51 @@
+<html>
+
+<head>
+	<title>Inline editor</title>
+	<link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+
+</head>
+
+<body class="h-screen">
+
+
+
+
+	<div id="app" class="h-screen flex justify-center items-center bg-gray-900">
+
+		<div>
+			<div class="bg-white rounded-md p-5 shadow-md">
+        <nav class="flex flex-row">
+            <button class="text-gray-600 py-4 px-6 block hover:text-blue-500 focus:outline-none text-blue-500 border-b-2 font-medium border-blue-500">
+                <router-link to="/members/1">Adam</router-link>
+            </button>
+            <button class="text-gray-600 py-4 px-6 block hover:text-blue-500 focus:outline-none">
+              <router-link to="/members/2">Przemek</router-link>
+            </button>
+            <button class="text-gray-600 py-4 px-6 block hover:text-blue-500 focus:outline-none">
+              <router-link to="/members/3">Marcin</router-link>
+            </button>
+        </nav>
+      </div>
+
+			<div>
+				<div class="sm:w-1/4 p-2">
+					<div class="bg-white px-6 py-8 rounded-lg shadow-lg text-center">
+						<h2 class="text-xl font-medium text-gray-700">[name]</h2>
+						<span class="text-blue-500 block mb-5">[role]</span>
+
+						<button href="#" class="px-4 py-2 bg-blue-500 text-white rounded-full"
+              >Say hello</button>
+					</div>
+				</div>
+
+				<router-view></router-view>
+			</div>
+		</div>
+	</div>
+
+
+
+</body>
+
+</html>
