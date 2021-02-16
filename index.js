@@ -8,28 +8,6 @@ const members = [
   { id: 3, first_name: "Marcin", last_name: "Czarkowski", role: "Member" }
 ];
 
-// const Memebers = {
-//      computed: {
-//         members() {
-//             return members;
-//         }
-//     },
-//     template: `
-//     <div class="bg-white rounded-md p-5 shadow-md">
-//         <nav class="flex flex-row">
-//             <button class="text-gray-600 py-4 px-6 block hover:text-blue-500 focus:outline-none text-blue-500 border-b-2 font-medium border-blue-500">
-//                 <router-link to="/members/1">Adam</router-link>
-//             </button>
-//             <button class="text-gray-600 py-4 px-6 block hover:text-blue-500 focus:outline-none">
-//               <router-link to="/members/2">Przemek</router-link>
-//             </button>
-//             <button class="text-gray-600 py-4 px-6 block hover:text-blue-500 focus:outline-none">
-//               <router-link to="/members/3">Marcin</router-link>
-//             </button>
-//         </nav>
-//      </div>`
-// }
-
 Vue.component("route-header", {
   methods: {
     setActiveClass: function(siteNr) {
@@ -44,21 +22,33 @@ Vue.component("route-header", {
   },
   template: `
 			<div class="bg-white rounded-md p-5 shadow-md">
-     <p> sasdasd {{setActiveClass()}}</p>
+
         <nav class="flex flex-row">
-            <button class="text-gray-600 py-4 px-6 block hover:text-blue-500 focus:outline-none text-blue-500 border-b-2 font-medium border-blue-500">
+      
+            <button 
+              
+              v-bind:class="{ 'text-blue-500 border-b-2 border-blue-500 font-medium' : setActiveClass(1)}"
+
+            class="text-gray-600 py-4 px-6 block hover:text-blue-500 focus:outline-none">
+
                 <router-link to="/members/1">Adam</router-link>
+
             </button>
+            
             <button 
             
-            v-bind:class="{ 'text-green-500' : setActiveClass(2)}"
+            v-bind:class="{ 'text-blue-500 border-b-2 border-blue-500 font-medium' : setActiveClass(2)}"
             
             class="text-gray-600 py-4 px-6 block hover:text-blue-500 focus:outline-none">
               <router-link to="/members/2">Przemek</router-link>
             </button>
+
+
             <button class="text-gray-600 py-4 px-6 block hover:text-blue-500 focus:outline-none">
               <router-link to="/members/3">Marcin</router-link>
             </button>
+
+
         </nav>
       </div> `
 });
