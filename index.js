@@ -34,10 +34,12 @@ const Member = {
   computed: {
     contact() {
       const id = parseInt(this.$route.params.id);
-      return members.filter(function(member) {
+      const newMembers = members.filter(function(member) {
         return member.id === id;
-      })[0];
-      return members;
+      })
+ 
+ console.log(newMembers)
+ return newMembers[0]
     }
   },
   template: `<div>
