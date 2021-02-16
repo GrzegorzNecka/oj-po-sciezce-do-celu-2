@@ -37,7 +37,7 @@ Vue.component("route-header", {
 
               class="text-gray-600 py-4 px-6 block hover:text-blue-500 focus:outline-none">
 
-              <router-link v-bind:to="/members/ + member.id">{{member.first_name}} </router-link>
+                  <router-link v-bind:to="/members/ + member.id">{{member.first_name}} </router-link>
 
             </button>
         </nav>
@@ -68,10 +68,11 @@ const Member = {
 						<span class="text-blue-500 block mb-5">{{setMemberData.role}}</span>
 
 						<button 
+
             v-on:click="displayMessage(setMemberData.first_name)"
-            
-            href="#" class="px-4 py-2 bg-blue-500 text-white rounded-full"
-              >Say hello</button>
+
+            href="#" class="px-4 py-2 bg-blue-500 text-white rounded-full">Say hello
+            </button>
 					</div>
 				</div>
 `
