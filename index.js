@@ -17,12 +17,7 @@ Vue.component("route-header", {
   methods: {
     setActiveClass: function(siteNr) {
       const id = parseInt(this.$route.params.id);
-
-      if (id === siteNr) {
-        return true;
-      } else {
-        return false;
-      }
+      return id === siteNr ? true : false;
     }
   },
   template: `
